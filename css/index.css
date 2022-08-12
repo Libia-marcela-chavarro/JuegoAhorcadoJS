@@ -1,0 +1,173 @@
+body {
+    background: #D7CCC8 !important;
+}
+
+/* .contenedor-principal{
+    filter: blur(5px);
+} */
+
+.estilos-paneles-principal {
+    background-color: #cac0bc;
+    border-radius: 20px;
+    filter: drop-shadow(5px 5px 3px #b8aaa5);
+}
+
+.panel-principal {
+    margin: auto;
+    margin-top: 3vh;
+    width: 70%;
+    height: 62vh;
+    min-width: 440px;
+
+}
+
+.titulo-juego {
+
+    text-align: center;
+    font-size: 60px;
+    font-family: 'Shadows Into Light', cursive;
+    font-weight: bolder;
+    color: #5b1f00;
+    text-shadow: 2px 2px 2px #66280a;
+}
+
+.panel-superior {
+    display: grid;
+    grid-template-columns: 30% 60% 8%;
+    grid-template-rows: auto;
+    margin: 2px;
+    height: 42vh;
+
+}
+
+.muñeco-ahorcado {
+    margin: 0%;
+    width: 100%;
+    height: 100%;
+    text-align: end;
+}
+
+.muñeco-ahorcado img {
+    margin-left: 10%;
+    margin-top: 5vh;
+    width: 60%;
+    height: 32vh;
+}
+
+.visor-palabra-oculta {
+    margin-top: 20vh;
+    margin-left: 10%;
+    width: 80%;
+    height: 100%;
+}
+
+.letra {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+
+}
+
+.letra input {
+    width: 95%;
+    background-color: #cac0bc;
+    border: 1px #cac0bc solid;
+    text-align: center;
+    border-bottom: 3px black solid;
+    height: 50px;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.botones-opcines-juego {
+    margin: auto;
+    margin-top: 2vh;
+    margin-block-end: 2vh;
+    width: 70%;
+    height: 10vh;
+    min-width: 440px;
+
+}
+
+
+
+.botones-opcines-juego button:nth-child(2) {
+    float: right;
+    margin-right: 15%;
+}
+
+.botones-opcines-juego button {
+    margin-left: 15%;
+    margin-block-end: 1vh;
+    margin-top: 2vh;
+    width: 15%;
+    height: 5vh;
+    text-align: center;
+    font-size: 19px;
+    font-family: 'Shadows Into Light', cursive;
+    background-color: #79574a;
+    border: 1px #cac0bc solid;
+}
+
+.teclado-pantalla {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.primera-fila-teclas {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
+    width: 99%;
+    margin: auto;
+}
+
+.primera-fila-teclas div {
+    text-align: center;
+}
+
+.primera-fila-teclas div button {
+    background-color: #8d6e63;
+    border: 1px #cac0bc solid;
+    box-shadow: 2px 2px 3px #ad9f99;
+    width: 98%;
+    font-family: 'Shadows Into Light', cursive;
+}
+
+.segunda-fila-teclas {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto;
+    width: 99%;
+    margin-left: 6px;
+}
+
+.segunda-fila-teclas div {
+    text-align: center;
+}
+
+.segunda-fila-teclas div button {
+    background-color: #8d6e63;
+    width: 98%;
+    border: 1px #cac0bc solid;
+    box-shadow: 2px 2px 3px #ad9f99;
+    font-family: 'Shadows Into Light', cursive;
+}
+
+.tercera-fila-teclas {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto;
+    width: 99%;
+    margin-left: 12px;
+}
+
+.tercera-fila-teclas div {
+    text-align: center;
+}
+
+.tercera-fila-teclas div button {
+    background-color: #8d6e63;
+    width: 98%;
+    border: 1px #cac0bc solid;
+    box-shadow: 2px 2px 3px #ad9f99;
+    font-family: 'Shadows Into Light', cursive;
+}

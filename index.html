@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/modal.css">
+    <title>Juego Ahorcado</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+        integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+
+    <!-- Juego Ahorcado -->
+
+    <!-- Modal 1 Game over -->
+    <div class="modal-1 modales">
+        <div class="div-modal">
+            <div class="div-cerrar">
+                <button onclick="cerrarModal()" type="button" class="btn btn-secondary">X</button>
+            </div>
+            <div class="modalTitulo">
+                <h2 class="titulo">Game Over</h2>
+            </div>
+            <div class="div-botones">
+                <button onclick="reinciarJuego()" type="button" class="btn btn-secondary">Reiniciar Juego</button>
+
+            </div>
+        </div>
+    </div>
+    <!-- Modal 2 juego ganado-->
+    <div class="modal-2 modales">
+        <div class="div-modal">
+            <div class="div-cerrar">
+                <button onclick="cerrarModal()" type="button" class="btn btn-secondary">X</button>
+            </div>
+            <div class="modalTitulo">
+                <h2 class="titulo">Felicidades, Has ganado el juego</h2>
+            </div>
+            <div class="div-botones">
+                <button onclick="reinciarJuego()" type="button" class="btn btn-secondary">Reiniciar Juego</button>
+
+            </div>
+        </div>
+    </div>
+    <!-- Modal 3 Rendirse  -->
+    <div class="modal-3 modales">
+        <div class="div-modal">
+            <div class="div-cerrar">
+                <button onclick="cerrarModal()" type="button" class="btn btn-secondary">X</button>
+            </div>
+            <div class="modalTitulo">
+                <h2 class="titulo">¿Estas seguro de salir? </h2>
+            </div>
+            <div class="div-botones">
+                <button onclick="reinciarJuego()" type="button" class="btn btn-secondary">Reiniciar Juego</button>
+                <button onclick="cerrarModal()" type="button" class="btn btn-secondary">Continuar</button>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- Contenido Principal del Template -->
+    <div class="contenedor-principal">
+        <h1 class="titulo-juego">Juego Ahorcado</h1>
+        <div><input class="visor-nivel-actual" value="" type="text" name="" id="VisorNivelActual"></div>
+        <div class="panel-principal estilos-paneles-principal">
+            <div class="panel-superior">
+
+                <!-- Panel del muñeco -->
+                <div class="muñeco-ahorcado" style "float: left">
+                    <img src="./img/1.jpg" id="ImagenAhorcado" />
+                </div>
+
+                <!-- Panel del visor de la palabra oculta -->
+                <div class="visor-palabra-oculta" style "float: right">
+                    <div class="letra">
+                        <input class="visor" value="" type="text" id="0" readonly>
+                        <input class="visor" value="" type="text" id="1" readonly>
+                        <input class="visor" value="" type="text" id="2" readonly>
+                        <input class="visor" value="" type="text" id="3" readonly>
+                        <input class="visor" value="" type="text" id="4" readonly>
+                        <input class="visor" value="" type="text" id="5" readonly>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Panel del teclado para el usuario -->
+            <div class="teclado-pantalla">
+                <div class="primera-fila-teclas">
+                    <div>
+                        <button onclick="precionarLetra('Q')" type="button" class="btn btn-secondary">Q</button>
+                    </div>
+                    <div>
+                        <button onclick="precionarLetra('W')" type="button" class="btn btn-secondary">W</button>
+                    </div>
+                    <div>
+                        <button onclick="precionarLetra('E')" type="button" class="btn btn-secondary">E</button>
+                    </div>
+                    <div>
+                        <button onclick="precionarLetra('R')" type="button" class="btn btn-secondary">R</button>
+                    </div>
+                    <div>
+                        <button onclick="precionarLetra('T')" type="button" class="btn btn-secondary">T</button>
+                    </div>
+                    <div>
+                        <button onclick="precionarLetra('Y')" type="button" class="btn btn-secondary">Y</button>
+                    </div>
+                    <div>
+                        <button onclick="precionarLetra('U')" type="button" class="btn btn-secondary">U</button>
+                    </div>
+                    <div>
+                        <button onclick="precionarLetra('I')" type="button" class="btn btn-secondary">I</button>
+                    </div>
+                    <div>
+                        <button onclick="precionarLetra('O')" type="button" class="btn btn-secondary">O</button>
+                    </div>
+                    <div>
+                        <button onclick="precionarLetra('P')" type="button" class="btn btn-secondary">P</button>
+                    </div>
+                </div>
+                <div class="segunda-fila-teclas">
+                    <div>
+                        <button onclick="precionarLetra('A')" type="button" class="btn btn-secondary">A</button>
+                    </div>
+                    <div>
+                        <button onclick="precionarLetra('S')" type="button" class="btn btn-secondary">S</button>
+                    </div>
+                    <div>
+                        <button onclick="precionarLetra('D')" type="button" class="btn btn-secondary">D</button>
+                    </div>
+                    <div>
+                        <button onclick="precionarLetra('F')" type="button" class="btn btn-secondary">F</button>
+                    </div>
+                    <div>
+                        <button onclick="precionarLetra('G')" type="button" class="btn btn-secondary">G</button>
+                    </div>
+                    <div>
+                        <button onclick="precionarLetra('H')" type="button" class="btn btn-secondary">H</button>
+                    </div>
+                    <div>
+                        <button onclick="precionarLetra('J')" type="button" class="btn btn-secondary">J</button>
+                    </div>
+                    <div>
+                        <button onclick="precionarLetra('K')" type="button" class="btn btn-secondary">K</button>
+                    </div>
+                    <div>
+                        <button onclick="precionarLetra('L')" type="button" class="btn btn-secondary">L</button>
+                    </div>
+                </div>
+                <div class="tercera-fila-teclas">
+                    <div>
+                        <button onclick="precionarLetra('Ñ')" type="button" class="btn btn-secondary">Ñ</button>
+                    </div>
+                    <div>
+                        <button onclick="precionarLetra('Z')" type="button" class="btn btn-secondary">Z</button>
+                    </div>
+                    <div>
+                        <button onclick="precionarLetra('X')" type="button" class="btn btn-secondary">X</button>
+                    </div>
+                    <div>
+                        <button onclick="precionarLetra('C')" type="button" class="btn btn-secondary">C</button>
+                    </div>
+                    <div>
+                        <button onclick="precionarLetra('V')" type="button" class="btn btn-secondary">V</button>
+                    </div>
+                    <div>
+                        <button onclick="precionarLetra('B')" type="button" class="btn btn-secondary">B</button>
+                    </div>
+                    <div>
+                        <button onclick="precionarLetra('N')" type="button" class="btn btn-secondary">N</button>
+                    </div>
+                    <div>
+                        <button onclick="precionarLetra('M')" type="button" class="btn btn-secondary">M</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="botones-opcines-juego estilos-paneles-principal">
+            <button onclick="rendirse()" type="button" class="btn btn-primary">Rendirse</button>
+            <button onclick="avanzarNivel()" id="boton" type="button" class="btn btn-secondary">Siguiente nivel</button>
+        </div>
+    </div>
+
+    <script src="./js/niveles.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/modales.js"></script>
+    <script src="./js/botones.js"></script>
+    <script src="./js/validaciones.js"></script>
+
+</body>
+
+</html>
